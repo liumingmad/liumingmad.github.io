@@ -1,7 +1,7 @@
 title: 怎样确定https正确发出了
 author: ming
 date: 2026-01-28 20:39:57
-tags:
+tags: 协议
 ---
 ### 怎样确定https正确发出了
 
