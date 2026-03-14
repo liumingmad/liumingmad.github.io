@@ -23,21 +23,30 @@ objdump -M intel -d rev50_linux64-bit
     11c8:	48 83 ec 10          	sub    rsp,0x10
     11cc:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
     11cf:	48 89 75 f0          	mov    QWORD PTR [rbp-0x10],rsi
+
+    # 检查有参数
     11d3:	83 7d fc 02          	cmp    DWORD PTR [rbp-0x4],0x2
+
     11d7:	75 7e                	jne    1257 <main+0x93>
     11d9:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
     11dd:	48 83 c0 08          	add    rax,0x8
     11e1:	48 8b 00             	mov    rax,QWORD PTR [rax]
     11e4:	48 89 c7             	mov    rdi,rax
     11e7:	e8 54 fe ff ff       	call   1040 <strlen@plt>
+
+    # 检查参数的长度为10
     11ec:	48 83 f8 0a          	cmp    rax,0xa
+
     11f0:	75 54                	jne    1246 <main+0x82>
     11f2:	48 8b 45 f0          	mov    rax,QWORD PTR [rbp-0x10]
     11f6:	48 83 c0 08          	add    rax,0x8
     11fa:	48 8b 00             	mov    rax,QWORD PTR [rax]
     11fd:	48 83 c0 04          	add    rax,0x4
     1201:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+
+    # 第5个字符是@
     1204:	3c 40                	cmp    al,0x40
+
     1206:	75 2d                	jne    1235 <main+0x71>
     1208:	48 8d 3d 16 0e 00 00 	lea    rdi,[rip+0xe16]        # 2025 <_IO_stdin_used+0x25>
     120f:	e8 1c fe ff ff       	call   1030 <puts@plt>
@@ -68,5 +77,3 @@ objdump -M intel -d rev50_linux64-bit
     126c:	c3                   	ret
     126d:	0f 1f 00             	nop    DWORD PTR [rax]
 ```
-
-### 3. gdb调试
