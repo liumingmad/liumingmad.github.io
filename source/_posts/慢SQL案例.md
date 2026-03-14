@@ -1,7 +1,7 @@
-title: <协议>慢SQL案例
+title: 慢SQL案例
 author: ming
 date: 2025-04-30 10:23:00
-tags:
+tags: 协议
 ---
 ### Client
 ##### java client的报错信息

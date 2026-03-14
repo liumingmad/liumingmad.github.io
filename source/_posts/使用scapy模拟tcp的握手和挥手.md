@@ -1,7 +1,7 @@
-title: <协议>使用scapy模拟tcp的握手和挥手
+title: 使用scapy模拟tcp的握手和挥手
 author: ming
 date: 2025-04-28 00:18:36
-tags:
+tags: 协议
 ---
 ### 0. 直接上结果
 

@@ -56,4 +56,23 @@ fin
 
 # 继续执行到下一个断点
 c
-···
+```
+
+### 6. 调试汇编
+```
+# 查看反汇编
+objdump -d -M intel a.out
+
+(gdb) set disassembly-flavor intel
+
+# starti 停在最开始，再查真实地址
+(gdb) starti
+(gdb) info proc mappings    # 找到程序加载的基地址
+(gdb) b *0x555555555060     # 基地址 + 0x1060
+
+(gdb) r
+(gdb) layout asm
+(gdb) layout regs
+# 之后用 ni/si 单步，观察寄存器变化
+(gdb) x/8xg $rsp       # 随时查看栈
+```
