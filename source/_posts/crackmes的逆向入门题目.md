@@ -6,7 +6,7 @@ categories:
   - 逆向
 date: 2026-03-13 10:56:00
 ---
-# cbmhackers
+# easy_reverse
 
 https://crackmes.one/crackme/5b8a37a433c5d45fc286ad83
 
